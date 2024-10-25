@@ -1,0 +1,64 @@
+<div className="form ">
+      <form action="" onSubmit={handelSubmit}>
+        <legend>Submition Form</legend>
+        <div className="input-container">
+          <input
+            className="input1"
+            type="text"
+            placeholder="Enter the Username"
+            onChange={handelchange}
+            name="username"
+          />
+          {error.username && (
+            <p className="error1" style={{ color: "red" }}>
+              {error.username}
+            </p>
+          )}
+          <input
+          className="input2"
+            type="email"
+            placeholder="Enter the Email"
+            onChange={handelchange}
+            name="email"
+          />
+          {error.email && (
+            <p className="error2" style={{ color: "red" }}>
+              {error.email}
+            </p>
+          )}
+          <input
+          className="input3"
+            type="password"
+            placeholder="Enter the Password"
+            onChange={handelchange}
+            name="password"
+          />
+          {error.password && (
+            <p className="error3" style={{ color: "red" }}>
+              {error.password}
+            </p>
+          )}
+          <input
+          className="input4"
+            type="password"
+            placeholder="comfirm the password "
+            onChange={handelchange}
+            name="confirmPassword"
+          />
+          {error.confirmPassword && (
+            <p className="error4" style={{ color: "red" }}>
+              {error.confirmPassword}
+            </p>
+          )}
+        </div>
+        <div className="btn-container">
+          <button type="submit" className="btn">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+     /* background-image: linear-gradient(135deg, #df89b5 10%, #bfd9fe 100%); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */

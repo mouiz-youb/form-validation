@@ -37,49 +37,38 @@ function App() {
     }
   };
   return (
-    <div className="form ">
-      <form action="" onSubmit={handelSubmit}>
-        <legend>Submition Form</legend>
-        <div className="input-container">
-          <input
-            type="text"
-            placeholder="Enter the Username"
-            onChange={handelchange}
-            name="username"
-          />
-          {error.username && <p style={{ color: "red" }}>{error.username}</p>}
-          <input
-            type="email"
-            placeholder="Enter the Email"
-            onChange={handelchange}
-            name="email"
-          />
-          {error.email && <p style={{ color: "red" }}>{error.email}</p>}
-          <input
-            type="password"
-            placeholder="Enter the Password"
-            onChange={handelchange}
-            name="password"
-          />
-          {error.password && <p style={{ color: "red" }}>{error.password}</p>}
-          <input
-            type="password"
-            placeholder="comfirm the password "
-            onChange={handelchange}
-            name="confirmPassword"
-          />
-          {error.confirmPassword && (
-            <p style={{ color: "red" }}>{error.confirmPassword}</p>
-          )}
+    <div className="App-container">
+      <form action="">
+        <div className="from-content">
+          <legend>Form Submition</legend>
+          <div className="input-contianer">
+            <div className="input-first-line">
+              <div>
+                <input type="text" placeholder="Enter the username " />
+              </div>
+              <div>
+                <input type="text" placeholder="Enter the age" />
+              </div>
+            </div>
+            <div className="input-second-line">
+              <input type="email" placeholder="Enter the email" />
+            </div>
+            <div className="input-last-line">
+              <div>
+                <input type="password" placeholder="Enter the password" />
+              </div>
+              <div>
+                <input type="password" placeholder="Confirm the password " />
+              </div>
+            </div>
+          </div>
+          <div className="btn-container">
+            <button type="submit" className="submit">
+              Submit
+            </button>
+          </div>
         </div>
-        <div className="btn-container">
-          <button
-            type="submit"
-            className="text-center text-2xl p-1 text-amber-400   relative  left-56"
-          >
-            Submit
-          </button>
-        </div>
+        <div className="form-explenation"></div>
       </form>
     </div>
   );
